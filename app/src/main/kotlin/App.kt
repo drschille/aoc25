@@ -22,11 +22,11 @@ fun main() {
         R100
     """.trimIndent()
 
-    val testAnswer = SequenceParser(50, testData).executeInstructions()
+    val testAnswer = SequenceParser(50, testData).executeInstructionsOptimised()
     Printer("test answer: $testAnswer").printMessage()
 
     val codeReader = SequenceParser(50, inputDayOne)
-    val firstAnswer = codeReader.executeInstructions()
+    val firstAnswer = codeReader.executeInstructionsOptimised()
 
     Printer("first try: $firstAnswer").printMessage()
     val finalAnswer = codeReader.executeOneStepAtATime()
