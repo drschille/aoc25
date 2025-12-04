@@ -1,6 +1,4 @@
-package no.designsolutions.advent.utils
-
-import kotlin.collections.forEachIndexed
+package no.designsolutions.advent.utils.day_one
 
 class SequenceParser(private val startingPoint: Int, instructions: String) {
 
