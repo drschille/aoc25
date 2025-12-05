@@ -36,8 +36,12 @@ fun main() {
     DayFour.scout.printInput()
     println("\nOutput Matrix:")
     DayFour.scout.printOutput()
-    println("\nNumber of accessible paper rolls: ${DayFour.scout.accessible.flatMap { it }.count { it }}")
 
+    println("\nNumber of accessible paper rolls: ${DayFour.scout.accessible.flatMap { it.toList() }.count { it }}")
+    val rollsAtStart = DayFour.scout.matrix.sumOf { it.count { it } }
+    val rollsAfterFinish = DayFour.scout.removeRolls().sumOf { it.count {it} }
+    val totalRemoved = rollsAtStart - rollsAfterFinish
+    println("Total number of rolls removed: $totalRemoved")
 }
 
 fun Long.print(label: String = "") {
