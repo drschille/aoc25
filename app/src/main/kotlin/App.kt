@@ -1,6 +1,7 @@
 package no.designsolutions.advent.app
 
 import no.designsolutions.advent.utils.Printer
+import kotlin.system.measureTimeMillis
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -23,8 +24,20 @@ fun main() {
 
     Printer("Day 3:").printMessage()
     DayThree.testOne()
-    DayThree.partOne()
+    measureTimeMillis {
+        DayThree.partOne()
+    }.print("Part 1")
     DayThree.testTwo()
-    DayThree.partTwo()
+    measureTimeMillis {
+        DayThree.partTwo()
+    }.print("Part 2")
 
+    println("Input Matrix:")
+    DayFour.printInput()
+    println("\nOutput Matrix:")
+    DayFour.printOutput()
+}
+
+fun Long.print(label: String = "") {
+    println("$label took $this milliseconds to run")
 }

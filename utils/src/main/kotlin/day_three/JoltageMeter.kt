@@ -14,6 +14,7 @@ class JoltageMeter(input: String, private val batteries: Int = 2) {
         sequence.forEachIndexed loop@{ index, number ->
             val batteriesLeft = sequenceLength - index - 1
             map.forEachIndexed{ packIndex, largest ->
+                if (largest == 9) return@forEachIndexed
                 val slotsLeft = batteries - packIndex - 1
                 if (number > largest && batteriesLeft >= slotsLeft) {
                     map[packIndex] = number
