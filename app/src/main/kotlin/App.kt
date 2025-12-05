@@ -33,9 +33,11 @@ fun main() {
     }.print("Part 2")
 
     println("Input Matrix:")
-    DayFour.printInput()
+    DayFour.scout.printInput()
     println("\nOutput Matrix:")
-    DayFour.printOutput()
+    DayFour.scout.printOutput()
+    println("\nNumber of accessible paper rolls: ${DayFour.scout.accessible.flatMap { it }.count { it }}")
+
 }
 
 fun Long.print(label: String = "") {
