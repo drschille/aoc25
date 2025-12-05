@@ -22,26 +22,31 @@ fun main() {
 //    DayTwo.testTwo()
 //    DayTwo.partTwo()
 
-    Printer("Day 3:").printMessage()
-    DayThree.testOne()
-    measureTimeMillis {
-        DayThree.partOne()
-    }.print("Part 1")
-    DayThree.testTwo()
-    measureTimeMillis {
-        DayThree.partTwo()
-    }.print("Part 2")
+//    Printer("Day 3:").printMessage()
+//    DayThree.testOne()
+//    measureTimeMillis {
+//        DayThree.partOne()
+//    }.print("Part 1")
+//    DayThree.testTwo()
+//    measureTimeMillis {
+//        DayThree.partTwo()
+//    }.print("Part 2")
+//
+//    Printer("Day 4:").printMessage()
+//    println("Input Matrix:")
+//    DayFour.scout.printInput()
+//    println("\nOutput Matrix:")
+//    DayFour.scout.printOutput()
+//
+//    println("\nNumber of accessible paper rolls: ${DayFour.scout.accessible.flatMap { it.toList() }.count { it }}")
+//    val rollsAtStart = DayFour.scout.matrix.sumOf { it.count { it } }
+//    val rollsAfterFinish = DayFour.scout.removeRolls().sumOf { it.count {it} }
+//    val totalRemoved = rollsAtStart - rollsAfterFinish
+//    println("Total number of rolls removed: $totalRemoved")
+    Printer("Day 5:").printMessage()
 
-    println("Input Matrix:")
-    DayFour.scout.printInput()
-    println("\nOutput Matrix:")
-    DayFour.scout.printOutput()
-
-    println("\nNumber of accessible paper rolls: ${DayFour.scout.accessible.flatMap { it.toList() }.count { it }}")
-    val rollsAtStart = DayFour.scout.matrix.sumOf { it.count { it } }
-    val rollsAfterFinish = DayFour.scout.removeRolls().sumOf { it.count {it} }
-    val totalRemoved = rollsAtStart - rollsAfterFinish
-    println("Total number of rolls removed: $totalRemoved")
+    DayFive.startup()
+    println("Number of fresh ingredients: ${DayFive.countFresh()}")
 }
 
 fun Long.print(label: String = "") {
