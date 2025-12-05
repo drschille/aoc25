@@ -45,8 +45,13 @@ fun main() {
 //    println("Total number of rolls removed: $totalRemoved")
     Printer("Day 5:").printMessage()
 
-    DayFive.startup()
-    println("Number of fresh ingredients: ${DayFive.countFresh()}")
+//    DayFive.startup()
+//    println("Number of fresh ingredients: ${DayFive.countFresh()}")
+//    println("Number of possible fresh ingredients: ${ DayFive.countFresh()}")
+    println("ranges: ${DayFive.rangesSorted}")
+    println("merged ranges: ${DayFive.merger()}")
+    println("sum of ranges: ${DayFive.merger().sumOf { it.second - (it.first - 1) }}")
+
 }
 
 fun Long.print(label: String = "") {
