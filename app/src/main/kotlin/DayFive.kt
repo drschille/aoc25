@@ -4,6 +4,8 @@ import no.designsolutions.advent.utils.FileReader
 import java.lang.Long.max
 import kotlin.math.min
 
+
+
 object DayFive {
     val input = FileReader("day_five_input.txt").text
     val ranges = input.substringBefore("\n\n")
@@ -47,10 +49,10 @@ object DayFive {
             val merged = merge(buckets.last() to rangesSorted[i])
             buckets = buckets.dropLast(1) + merged
         }
-//        println(buckets)
         return buckets.toList()
     }
+
+    fun Pair<Long, Long>.max(): Long = max(first, second)
+    fun Pair<Long, Long>.min(): Long = min(first, second)
 }
 
-fun Pair<Long, Long>.max(): Long = max(first, second)
-fun Pair<Long, Long>.min(): Long = min(first, second)
